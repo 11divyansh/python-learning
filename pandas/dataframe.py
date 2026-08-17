@@ -52,7 +52,7 @@ df.drop("name", axis=1)               # returns a new DataFrame, doesn't modify 
 df.drop("name", axis=1, inplace=True) # modifies in place
 
 #Row Selection, Addition, and Deletion
-python
+
 df.loc[0]                              # select row by label
 df.iloc[0]                             # select row by position
 
@@ -60,3 +60,17 @@ new_row = pd.DataFrame([{"name": "Zoe", "age": 25}])
 df = pd.concat([df, new_row], ignore_index=True)   # add a row (modern way -- .append() is removed)
 
 df = df.drop(0) 
+
+#DataFrame Basic Functionality
+df = pd.DataFrame({"a": [1,2,3], "b": [4,5,6]})
+
+df.T              # transpose
+df.axes           # list of row/column labels
+df.dtypes
+df.empty          # True if no data
+df.ndim           # number of dimensions
+df.shape          # (rows, cols)
+df.size           # total number of elements
+df.values         # underlying NumPy array
+df.head(2)
+df.tail(2)
