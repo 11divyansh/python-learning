@@ -1,1 +1,1 @@
-Only a learning repo
+This is not a project, its just a learning repo
