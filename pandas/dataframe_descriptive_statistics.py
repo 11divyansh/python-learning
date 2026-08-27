@@ -48,3 +48,6 @@ print(df["age"].mode())
 #now class B:10,50,90, these spread out much more, so std is larger
 df.std(numeric_only=True)
 
+df.describe()                          # count, mean, std, min, quartiles, max for numeric cols
+df.describe(include="all")             # include non-numeric columns too
+df.describe(include=["object"])        # only object/string columns
